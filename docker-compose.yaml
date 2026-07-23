@@ -1,13 +1,12 @@
 services:
   audit-rf:
-    image: jeserna/audit-rf:v0.0.6
+    image: jeserna/audit-rf:v0.0.27
     container_name: audit-rf
     env_file:
       - ${SECRETS_DIR:-/opt/secrets}/common-configs.env
       - ${SECRETS_DIR:-/opt/secrets}/rabbit-mq-secrets.env
       - ${SECRETS_DIR:-/opt/secrets}/db-secrets.env
       - ${SECRETS_DIR:-/opt/secrets}/audit-configs.env
-
     restart: unless-stopped
     networks:
       - dokploy-network
