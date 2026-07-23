@@ -1,6 +1,6 @@
 services:
   audit-rf:
-    image: jeserna/audit-rf:v0.0.27
+    image: jeserna/audit-rf:v0.0.31
     container_name: audit-rf
     env_file:
       - ${SECRETS_DIR:-/opt/secrets}/common-configs.env
